@@ -1,0 +1,214 @@
+
+/*  DSENT AG - Base Layout V.1.0
+Initial Relase: 17.06.2021
+Last Update: 18.06.2021 - MCR
+
+
+                                                  
+                                   ..'',,''..                                   
+                                .':loooddoool:'.                                
+                               .cooooc::::cooooc.                               
+                              'lodo:..    ..:odol'                              
+                             .:ooo;.        .;ooo:.                             
+                  .....      .cooo,          ,oooc.                             
+              .';:cclcc:,..  .;ooo:.        .:odo;.  ..';;:::;,'.               
+            .,loooooooodoo:'. .:oooc.   ..';looo:. .':lodddoooool;.             
+           .:odol;'...,:lodo;. .:oooc' ..,loooc,. .;loooc;,,,;codol,.           
+          .:odo:.      .'lodl,  .;oool'. .,:;'.  .:oooc'.     .,lodl'           
+          .cdol'        .;ooo:.  .,lool,..      'codo:.        .;ooo:.          
+          .cddl,        .,clc,.   .'loool;.   .,looo;.         .;ooo:.          
+          .,odol,..      .....      'coddo;. .;oool,...'.     .,lool'           
+           .,loool::;;;;;;;;;;;;;;'. .codl,..:odoc' .;loc;,,,;coool,.           
+             .,cloooddddoddoodddddoc'..:l;.'codo:.  .;loddooddooc;.             
+               ..',,,,,,,,,,,,,,,,,,,. ....:::;'.     .',;:::;,..               
+                 ......         ......   ....................                   
+             ..,:cllllc:,..   .;cloc'... .,:cccccccccccccccc::,'.               
+            .:ooooollooool'  .coooc..;l;...'coooooooooooooooodool;.             
+          .,ldoo:,....,:c,. 'cooo:. .ldol:. ..'''''''''''''',;coooc'            
+          .ldol,.      .. .,lool;.  .:ooooc.     ..''..       .;odoc.           
+          ,ooo:.         .;oool'.    .:oodoc.    ,looc.        .cooo,           
+          'lool.        .:odoc.   ... .;lodol'   'lddc.        .cooo,           
+          .;oooc,..  ..,looo:.  .;clc' ..;lool,. .:oooc'.    ..:ooo:.           
+           .;lodolc::clodol,. .;loool;.  .,lool;. .:ooooc;;;;coooo:.            
+             .,clooodoolc,.  .:odoc,..     'codo;. .':looddodool:'.             
+               ...',,'...    ,oooc.         'lool.    .',;;;;,'..               
+                            .;odo:.         .cddl'                              
+                             'ldol'.       .;oooc.                              
+                             .,oool:'.....,codol'                               
+                              .'coodoollooodol:.                                
+                                ..,:clllllc:,..                                 
+                                    .......                                     
+                                                          
+
+
+*/
+
+
+/* ------------------------------------------------------------------
+
+  01. Webfont Import
+  02. Variables
+  03. Typography
+  04. Colors  
+
+
+-------------------------------------------------------------------- */
+
+
+/*--------------------------------------------------
+	01. Webfont Import
+---------------------------------------------------*/
+
+
+@font-face {
+  font-family: "Adieu";
+  src: local("Adieu-Bold"),
+   url("../webfonts/Adieu-Bold.otf") format("truetype");
+  font-weight: bold;
+ }
+
+ @font-face {
+  font-family: "Gotham";
+  src: local("Gotham-Book"),
+   url("../webfonts/Gotham-Book.otf") format("truetype");
+  font-weight: regular;
+ }
+
+ @font-face {
+  font-family: "Gotham";
+  src: local("Gotham-Bold"),
+   url("../webfonts/Gotham-Bold.otf") format("truetype");
+  font-weight: bold;
+ }
+
+
+
+ /*--------------------------------------------------
+	02. Variables
+---------------------------------------------------*/
+
+:root {
+  --dsent-color: #61B453;
+  --bg-light-1: #f5f6f8;
+  --bg-light-2: #F1F6F9;
+  --bg-dark-1: #131419;
+  --bg-dark-2: #1E2027;
+  --bg-dark-3: #0D0D12;
+  --bg-dark-4: #0A0A0F;
+  --font-light: rgb(197, 197, 197);
+  --font-dark: #454545;
+}
+
+ /*--------------------------------------------------
+	03. Typography
+---------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Adieu', 'Helvetica', sans-serif;
+  color: #121029;
+  text-transform: uppercase;
+}
+
+
+p {
+  font-family: 'Gotham', 'Helvetica', sans-serif;
+  color: #333333;
+}
+
+
+a {
+  font-family: 'Gotham', 'Helvetica', sans-serif;
+}
+
+.headline {
+  font-family: 'Gotham', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  font-weight: regular;
+  color: var(--dsent-color);
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+
+.highlight {
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.headline::before {
+  content: "";
+  display: inline-block;
+  width: 90px;
+  height: 1px;
+  background: var(--dsent-color);
+  margin-right: 5%;
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .headline::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background: var(--dsent-color);
+    margin-right: 5%;
+
+  }
+}
+
+
+ /*--------------------------------------------------
+	04. Colors
+---------------------------------------------------*/
+
+
+.dsent-green {
+  color: var(--dsent-color);
+}
+
+.bg-dsent-green {
+  background-color: var(--dsent-color);
+}
+
+.bg-tint-dark {
+  background-color: #0d1117;
+}
+.dsent-gradient {
+  background-image: #54a633!important;
+  background-image: -moz-linear-gradient(90deg,rgba(84,166,51,1) 0%,rgba(64,143,38,1) 49%,rgba(45,126,24,1) 100%,rgba(9,9,121,1) 300%);
+  background-image: -webkit-linear-gradient(
+90deg
+,rgba(84,166,51,1) 0%,rgba(64,143,38,1) 49%,rgba(45,126,24,1) 100%,rgba(9,9,121,1) 300%);
+  background-image: linear-gradient(
+90deg
+,rgba(84,166,51,1) 0%,rgba(64,143,38,1) 49%,rgba(45,126,24,1) 100%,rgba(9,9,121,1) 300%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#54a633",endColorstr="#090979",GradientType=1);
+}
+
+.text-dsent-green {
+  color: var(--dsent-color);
+}
+
+
+ /*--------------------------------------------------
+	03. Typography
+---------------------------------------------------*/
+
+
+.max-w-8xl {
+  max-width: 110rem;
+}
+
+.btn {
+  font-family: 'Gotham', 'Helvetica', sans-serif;
+  font-weight: bold;
+}
